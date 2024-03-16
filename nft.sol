@@ -52,7 +52,7 @@ contract NFT is ERC721URIStorage, Ownable, Initializable, ReentrancyGuard {
 
     }
 
-    function mint(uint256 tokenId) external payable nonReentrant { // изменить to на msg.sender
+    function mint(uint256 tokenId) external payable nonReentrant { 
         require(isSaleActive, "The sale is not active");
         require(_totalSupply <= _maxTotalSupply, "total supply overflow");
 
